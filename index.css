@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body { @apply bg-ivory text-charcoal font-sans antialiased; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-terracotta; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors; }
+  .btn-primary { @apply btn bg-charcoal text-ivory hover:bg-terracotta; }
+  .btn-ghost { @apply btn border border-charcoal/20 hover:bg-ivory-dark; }
+}
+@layer components {
+  .field { @apply w-full rounded-xl border border-charcoal/20 bg-white px-4 py-3 text-sm; }
+  .err { @apply mt-1 text-xs text-terracotta; }
+  .card { @apply rounded-2xl border border-charcoal/10 bg-white p-6; }
+}
